@@ -14,15 +14,14 @@ import { getMainDefinition } from '@apollo/client/utilities';
 import {cache, typeDefs} from './contexts/cache';
 
 const uploadLink = createUploadLink({
-  uri: 'http://localhost:4000/'
+  // uri: 'http://localhost:4000/'
+  uri: 'https://2226448.linux.studentwebserver.co.uk'
 });
 
 const auth = setContext(async (_, { headers }) => {
 
   const token = localStorage.getItem('token');
   
-  console.log("Token ", token);
-
   return {
     headers: {
       ...headers,
@@ -32,7 +31,8 @@ const auth = setContext(async (_, { headers }) => {
 })
 
 const wsLink = new WebSocketLink({
-  uri: 'ws://localhost:4000/',
+  // uri: 'ws://localhost:4000/',
+  uri: 'wss://2226448.linux.studentwebserver.co.uk',
   options: {
     // reconnect: true,
   }

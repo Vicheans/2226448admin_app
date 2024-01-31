@@ -10,13 +10,9 @@ function Header({OpenSidebar}) {
             <BsJustify className='icon' onClick={OpenSidebar}/>
         </div>
         <div className='header-left'>
-            <BsSearch  className='icon'/>
+            <h2 className='p-2'>Patient Management System</h2>
         </div>
-        <div className='header-right'>
-            <BsFillBellFill className='icon'/>
-            <BsFillEnvelopeFill className='icon'/>
-            <BsPersonCircle className='icon'/>
-        </div>
+       
     </header>
   )
 }

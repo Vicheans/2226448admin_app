@@ -25,10 +25,6 @@ const Log_In = gql`
 `
 
 export default function Auth() {
-  
-    const [loading, setLoading] = useState(false);
-    const [showModal, setShowModal] = useState(false);
-    const [marg, setMarg] = useState(false);
 
     const [msg, setMsg] = useState('')
 
@@ -45,37 +41,13 @@ export default function Auth() {
     const submitHandler = e =>{
         e.preventDefault();
         const [email, password] = [e.target.email.value, e.target.password.value];
-        login({variables:{email, password, type:"admin"}});                       
+        login({variables:{email, password, type:"admin"}, timeout: 20000});                       
       }
-
-
-  
-
-      const [forgotPassword] = useMutation(Forgot_Password, {
-        onCompleted: data => {
-            console.log(data)
-        },
-        onError: error => {
-            console.log(error);
-        }
-
-    })
-
-
-      const submitForgot = (e) =>{
-        e.preventDefault();
-        // setLoading(!loading);
-
-        forgotPassword({variables:{
-            username: e.target.username.value
-        }})
-
-    }
 
   return (
     <Form onSubmit={submitHandler}>
   
-       {msg && <AlertComponent text={msg} variant={'danger'}/>}
+       {msg && <AlertComponent text={msg} variant={'info'}/>}
    
 
       <Form.Group className="mb-3" controlId="formBasicEmail">

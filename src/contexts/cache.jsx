@@ -7,12 +7,8 @@ export const typeDefs = gql`
     }
 `;
 
-// Initializes to true if localStorage includes a 'token' key,
-// false otherwise
 export const isLoggedInVar = makeVar(!!localStorage.getItem("token"));
-// Initializes to an empty array
 export const authVar = makeVar(localStorage.getItem("token"));
-
 export const cache = new InMemoryCache({
     addTypename: false,
     typePolicies: {

@@ -17,11 +17,6 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
 
         <ul className='sidebar-list'>
             <li className='sidebar-list-item'>
-                <Link to="/">
-                    <BsGrid1X2Fill className='icon'/> Dashboard
-                </Link>  
-            </li>
-            <li className='sidebar-list-item'>
                 <Link to="/doctors">
                     <BsFillArchiveFill className='icon'/> Doctors
                 </Link>  
@@ -29,11 +24,6 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
             <li className='sidebar-list-item'>
                 <Link to="/patients">
                     <BsFillGrid3X3GapFill className='icon'/> Patients
-                </Link>  
-            </li>
-            <li className='sidebar-list-item'>
-                <Link to="/appointments">
-                    <BsPeopleFill className='icon'/> Appointments
                 </Link>  
             </li>
             <li className='sidebar-list-item'>
