@@ -1,9 +1,20 @@
+import { useEffect, useState } from 'react';
 import {Button, Modal} from 'react-bootstrap'
 
 function ModalComponent(props) {
+
+  const [ex, setEx] = useState()
+
+  useEffect(() =>{
+
+   let { ["hideClose"]: excludedKey, ...newObject } = props
+    setEx(newObject)
+
+  },[props])
+
   return (
     <Modal
-      {...props}
+      {...ex}
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >

@@ -1,6 +1,5 @@
 {
   "name": "frontend",
-  "homepage": "https://vicheans.github.io/2226448admin_app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

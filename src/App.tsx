@@ -87,7 +87,7 @@ function App() {
         heading={"Welcome Admin"}
         hideClose={true}
       >
-        <Auth />
+        <Auth /> 
       </ModalComponent>
     </Router>
   );
